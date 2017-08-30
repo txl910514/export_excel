@@ -1,0 +1,1 @@
+import './js/handsontble_example1'

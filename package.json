@@ -19,9 +19,11 @@
   "homepage": "https://github.com/txl910514/exports_image_pdf#readme",
   "dependencies": {
     "echarts": "^3.6.2",
+    "handsontable": "^0.34.0",
     "html2canvas": "^0.5.0-beta4",
     "jquery": "^3.2.1",
-    "jspdf": "^1.3.3"
+    "jspdf": "^1.3.3",
+    "xlsx": "^0.11.3"
   },
   "devDependencies": {
     "art-template": "^4.12.1",
@@ -33,6 +35,7 @@
     "extract-text-webpack-plugin": "^3.0.0",
     "html-loader": "^0.5.0",
     "html-webpack-plugin": "^2.30.1",
+    "nodemailer": "^4.0.1",
     "open-browser-webpack-plugin": "^0.0.5",
     "style-loader": "^0.18.2",
     "webpack": "^3.4.1",

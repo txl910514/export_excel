@@ -10,6 +10,9 @@ let dist =path.resolve(__dirname,"dist")
 module.exports = {
   entry: {
     main: './src/main.js',
+    main1: './src/main1.js',
+    page: './src/page.js',
+    page1: './src/page1.js',
   },
   output:{
     path: dist,
@@ -33,7 +36,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        exclude: /(node_modules|bower_components)/,
+        // exclude: /(node_modules|bower_components)/,
         use: ExtractTextPlugin.extract({
           fallback: "style-loader",
           use: [
@@ -75,7 +78,31 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title:"main",
+      filename: 'main.html',
       template: path.resolve(__dirname, './index.html'),
+      chunks: ['main', 'vendor'],
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      title:"main1",
+      filename: 'main1.html',
+      template: path.resolve(__dirname, './index1.html'),
+      chunks: ['main1', 'vendor'],
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      title:"page",
+      filename: 'page.html',
+      template: path.resolve(__dirname, './page.html'),
+      chunks: ['page', 'vendor'],
+      inject: true
+    }),
+    new HtmlWebpackPlugin({
+      title:"page1",
+      filename: 'page1.html',
+      template: path.resolve(__dirname, './page1.html'),
+      chunks: ['page1', 'vendor'],
+      inject: true
     }),
     new ExtractTextPlugin("styles.css"),
     new OpenBrowserPlugin({url: 'http://localhost:5000/'}),
